@@ -7,4 +7,5 @@ Route::get('/', function () {
     return redirect()->route('materia.index');
 });
 
-Route::resource('materia', MateriaController::class);
+Route::resource('materia', MateriaController::class)
+    ->parameters(['materia' => 'materia']);
